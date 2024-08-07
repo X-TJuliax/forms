@@ -1,0 +1,11 @@
+<h1>Welcome to our website!!!</h1>
+
+<%= form_with(model: @user, local: true) do |f| %>
+    <%= f.label :username %>
+    <%= f.text_field :username, autofocus: true, required: true, placeholder:""%>
+    <%= f.label :email %>
+    <%= f.email_field :email, autofocus: true, required: true, placeholder:"example@gmail.com"%>
+    <%= f.label :password %>
+    <%= f.password_field :password, autofocus: true, required: true, placeholder:""%>
+    <%= f.submit %>
+<% end %>
